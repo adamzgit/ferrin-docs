@@ -1,72 +1,79 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "theme": "maple",
+  "name": "Ferrin Help",
+  "description": "Help for Ferrin, the task app that turns scattered thoughts into a clear plan.",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#309d4b",
+    "light": "#b9dcae",
+    "dark": "#237a3a"
+  },
+  "background": {
+    "color": {
+      "light": "#ffffff",
+      "dark": "#0f0f0f"
+    }
+  },
+  "appearance": {
+    "default": "system"
+  },
+  "fonts": {
+    "family": "Geist"
+  },
+  "icons": {
+    "library": "lucide"
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
+    "groups": [
       {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
+        "group": "Get started",
+        "pages": ["index", "get-started/how-say-it-works"]
+      },
+      {
+        "group": "Capture",
+        "pages": ["capture/mac", "capture/iphone"]
+      },
+      {
+        "group": "Your plan",
+        "pages": ["plan/review", "plan/details", "plan/today-and-upcoming", "plan/suggestions"]
+      },
+      {
+        "group": "Connect",
+        "pages": ["connect/ai-agents"]
+      },
+      {
+        "group": "Account and privacy",
+        "pages": ["account/your-data"]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    ]
   },
   "navbar": {
     "links": [
       {
-        "label": "Support",
-        "href": "mailto:support@mintlify.com"
+        "label": "ferrin.app",
+        "href": "https://www.ferrin.app"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Try Ferrin",
+      "href": "https://www.ferrin.app/#test-drive"
     }
   },
   "contextual": {
-    "options": [
-      "copy",
-      "view",
-      "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
-    ]
+    "options": ["copy", "view", "chatgpt", "claude"]
   },
   "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
-    }
+    "links": [
+      {
+        "header": "Ferrin",
+        "items": [
+          { "label": "Home", "href": "https://www.ferrin.app" },
+          { "label": "Privacy policy", "href": "https://www.ferrin.app/privacy" },
+          { "label": "Contact", "href": "mailto:support@ferrin.app" }
+        ]
+      }
+    ]
   }
 }
