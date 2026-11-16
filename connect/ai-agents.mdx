@@ -1,19 +1,25 @@
 ---
 title: "Connect an AI agent"
 description: "Let an AI agent read and add tasks to your plan."
+icon: "robot"
+iconType: "solid"
 ---
 
 You can connect an AI agent to Ferrin, using a prompt or Ferrin's MCP server, so the agent can read your plan and add tasks to it.
 
-## Using Ferrin's MCP server
+<img className="block dark:hidden" src="/images/ai-agent-light.png" alt="An AI agent connected to Ferrin listing open tasks and adding Renew passport" />
+<img className="hidden dark:block" src="/images/ai-agent-dark.png" alt="An AI agent connected to Ferrin listing open tasks and adding Renew passport" />
 
-Add Ferrin's MCP server to your agent and sign in when it asks. The server address is:
+## How to connect with Ferrin's MCP server
 
-```text
-https://mcp.ferrin.app/mcp
-```
+1. In your agent's settings, add an MCP server with this address:
 
-Your agent signs in to Ferrin with OAuth, so you approve the connection yourself.
+   ```text
+   https://mcp.ferrin.app/mcp
+   ```
+
+2. When your agent asks, **sign in** to Ferrin. It uses OAuth, so you approve the connection yourself.
+3. Ask your agent about your plan, or ask it to add a task.
 
 ## Using a prompt
 

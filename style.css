@@ -1,0 +1,85 @@
+/* Ferrin Help: keep the docs on Ferrin's design system (ferrin-site/docs/DESIGN.md → Website colour tokens).
+   Every colour here is one of the website's tokens. Mintlify loads this file on every page. */
+
+/* ── Grey scale ──────────────────────────────────────────────────────────
+   Mintlify builds its greys from the brand colour (so they're tinted green) and uses the same step for different
+   jobs in each theme (light text uses the dark end, dark-mode text uses the light end). So each theme gets its own
+   scale, mapped by role: surfaces and borders at one end, muted and primary text at the other. */
+:root {
+  --gray-50: 243 243 242;   /* #f3f3f2  surface */
+  --gray-100: 235 235 234;  /* #ebebea  sunken */
+  --gray-200: 230 230 229;  /* #e6e6e5  border */
+  --gray-300: 181 181 180;  /* #b5b5b4  strong border */
+  --gray-400: 138 138 138;  /* #8a8a8a  subtle text */
+  --gray-500: 107 107 107;  /* #6b6b6b  muted text */
+  --gray-600: 61 61 61;     /* #3d3d3d  body text */
+  --gray-700: 61 61 61;     /* #3d3d3d  body text */
+  --gray-800: 23 23 23;     /* #171717  primary text */
+  --gray-900: 23 23 23;     /* #171717  primary text */
+  --gray-950: 23 23 23;     /* #171717  primary text */
+}
+html.dark {
+  --gray-50: 237 237 237;   /* #ededed  primary text */
+  --gray-100: 237 237 237;  /* #ededed  primary text */
+  --gray-200: 237 237 237;  /* #ededed  primary text */
+  --gray-300: 201 201 201;  /* #c9c9c9  body text */
+  --gray-400: 143 143 143;  /* #8f8f8f  muted text */
+  --gray-500: 143 143 143;  /* #8f8f8f  muted text */
+  --gray-600: 111 111 111;  /* #6f6f6f  subtle text */
+  --gray-700: 77 77 77;     /* #4d4d4d  strong border */
+  --gray-800: 43 43 43;     /* #2b2b2b  border */
+  --gray-900: 28 28 28;     /* #1c1c1c  surface */
+  --gray-950: 15 15 15;     /* #0f0f0f  page */
+}
+
+/* ── Text ──────────────────────────────────────────────────────────────── */
+body { color: #3d3d3d; }
+html.dark body { color: #c9c9c9; }
+#content-area :is(h1, h2, h3, h4, strong, th),
+#header :is(h1, h2) { color: #171717; }
+html.dark #content-area :is(h1, h2, h3, h4, strong, th),
+html.dark #header :is(h1, h2) { color: #ededed; }
+
+/* ── Code blocks: the surface colour, body-coloured text ──────────────── */
+[data-component-part='code-block-root'] { background-color: #f3f3f2 !important; }
+html.dark [data-component-part='code-block-root'] { background-color: #151515 !important; }
+[data-component-part='code-block-root'] :is(pre, code, span) { color: #3d3d3d !important; }
+html.dark [data-component-part='code-block-root'] :is(pre, code, span) { color: #c9c9c9 !important; }
+
+/* ── Callouts (Tip): Ferrin green, not Tailwind's ─────────────────────── */
+.callout[data-callout-type='tip'] { border-color: #b9dcae; background-color: rgb(48 157 75 / 0.12); }
+.callout[data-callout-type='tip'] :is([data-component-part='callout-content'], [data-component-part='callout-content'] *, [data-component-part='callout-icon'] svg) { color: #237a3a; }
+html.dark .callout[data-callout-type='tip'] { border-color: #2b2b2b; background-color: rgb(48 157 75 / 0.16); }
+html.dark .callout[data-callout-type='tip'] :is([data-component-part='callout-content'], [data-component-part='callout-content'] *, [data-component-part='callout-icon'] svg) { color: #b9dcae; }
+
+/* ── Header title: "Ferrin" in the text colour, "Help" in the muted grey ──
+   The site name stays "Ferrin Help" (browser tabs, screen readers); the visible title is drawn here. */
+.nav-logo { display: inline-flex !important; align-items: center; font-size: 0 !important; line-height: 1 !important; }
+.nav-logo::before,
+.nav-logo::after { font-size: 1.5rem; }
+.nav-logo::before { content: 'Ferrin'; color: #171717; }
+.nav-logo::after { content: '\00a0Help'; color: #6b6b6b; }
+html.dark .nav-logo::before { color: #ededed; }
+html.dark .nav-logo::after { color: #8f8f8f; }
+@media (min-width: 640px) {
+  .nav-logo::before,
+  .nav-logo::after { font-size: 1.875rem; }
+}
+
+/* ── Code block scrollbar: track and handle in the border greys ──────── */
+[data-component-part='code-block-root'] [class*='bg-neutral-50'] { background-color: #ebebea !important; }
+[data-component-part='code-block-root'] [class*='bg-neutral-300'] { background-color: #b5b5b4 !important; }
+html.dark [data-component-part='code-block-root'] [class*='bg-neutral-50'] { background-color: #2b2b2b !important; }
+html.dark [data-component-part='code-block-root'] [class*='bg-neutral-300'] { background-color: #4d4d4d !important; }
+
+/* ── Theme switch (header): the same tile as the app icons in the website footer:
+   36px square, 10px corners (--radius-sm), the surface grey behind, hover a step darker ── */
+#theme-preference-menu-trigger {
+  display: grid !important; place-items: center; width: 36px !important; height: 36px !important; padding: 0 !important;
+  border-radius: 10px !important; background-color: #f3f3f2 !important; color: #3d3d3d !important;
+  transition: background-color 0.2s;
+}
+#theme-preference-menu-trigger:hover { background-color: #e0e0df !important; }
+#theme-preference-menu-trigger svg { width: 16px; height: 16px; }
+html.dark #theme-preference-menu-trigger { background-color: #1c1c1c !important; color: #c9c9c9 !important; }
+html.dark #theme-preference-menu-trigger:hover { background-color: #2a2a2a !important; }

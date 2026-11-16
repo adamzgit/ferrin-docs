@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "maple",
+  "theme": "mint",
   "name": "Ferrin Help",
   "description": "Help for Ferrin, the task app that turns scattered thoughts into a clear plan.",
   "colors": {
@@ -21,30 +21,45 @@
     "family": "Geist"
   },
   "icons": {
-    "library": "lucide"
+    "library": "fontawesome"
   },
   "favicon": "/favicon.svg",
   "navigation": {
     "groups": [
       {
         "group": "Get started",
-        "pages": ["index", "get-started/how-say-it-works"]
+        "pages": [
+          "index",
+          "get-started/how-say-it-works"
+        ]
       },
       {
         "group": "Capture",
-        "pages": ["capture/mac", "capture/iphone"]
+        "pages": [
+          "capture/mac",
+          "capture/iphone"
+        ]
       },
       {
         "group": "Your plan",
-        "pages": ["plan/review", "plan/details", "plan/today-and-upcoming", "plan/suggestions"]
+        "pages": [
+          "plan/review",
+          "plan/details",
+          "plan/today-and-upcoming",
+          "plan/suggestions"
+        ]
       },
       {
         "group": "Connect",
-        "pages": ["connect/ai-agents"]
+        "pages": [
+          "connect/ai-agents"
+        ]
       },
       {
         "group": "Account and privacy",
-        "pages": ["account/your-data"]
+        "pages": [
+          "account/your-data"
+        ]
       }
     ]
   },
@@ -60,20 +75,5 @@
       "label": "Try Ferrin",
       "href": "https://www.ferrin.app/#test-drive"
     }
-  },
-  "contextual": {
-    "options": ["copy", "view", "chatgpt", "claude"]
-  },
-  "footer": {
-    "links": [
-      {
-        "header": "Ferrin",
-        "items": [
-          { "label": "Home", "href": "https://www.ferrin.app" },
-          { "label": "Privacy policy", "href": "https://www.ferrin.app/privacy" },
-          { "label": "Contact", "href": "mailto:support@ferrin.app" }
-        ]
-      }
-    ]
   }
 }
