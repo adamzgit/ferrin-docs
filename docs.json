@@ -15,7 +15,7 @@
     }
   },
   "appearance": {
-    "default": "system"
+    "default": "dark"
   },
   "fonts": {
     "family": "Geist"
