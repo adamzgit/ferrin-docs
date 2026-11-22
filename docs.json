@@ -75,5 +75,10 @@
       "label": "Try Ferrin",
       "href": "https://www.ferrin.app/#test-drive"
     }
+  },
+  "seo": {
+    "metatags": {
+      "canonical": "https://www.ferrin.app"
+    }
   }
 }
