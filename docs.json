@@ -53,6 +53,8 @@
       {
         "group": "Connect",
         "pages": [
+          "connect/apps",
+          "connect/flagged-email",
           "connect/ai-agents"
         ]
       },
