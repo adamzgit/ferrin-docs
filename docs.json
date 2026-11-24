@@ -30,7 +30,8 @@
         "group": "Get started",
         "pages": [
           "index",
-          "get-started/how-say-it-works"
+          "get-started/how-say-it-works",
+          "get-started/move-from-microsoft-to-do"
         ]
       },
       {
